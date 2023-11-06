@@ -1,0 +1,364 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body {
+    height: 100%;
+    width: 100%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    background-color: black;
+    color: #fff;
+}
+.header{
+    width: 100%;
+    height: 100vh;
+    background-image:  linear-gradient(to top,rgba(0,0,0,0.8),rgba(0,0,0,0.4),rgba(0,0,0,0.8)),url(assets/page1bg.jpg);
+    background-size: cover ;
+    background-position: absolute;
+    padding: 10px 8%;
+    
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+.logo{
+    width: 15%;
+    cursor: pointer;
+}
+nav button{
+    border: 0;
+    outline: 0;
+    background: #b90505;
+    color: #fff;
+    padding: 7px 20px;
+    font-size: 14px;
+    border-radius: 4px;
+    margin: 10px;
+    cursor: pointer;
+}
+.lang_btn{
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid #ffffffa2;
+    background-color: transparent;
+    padding: 7px 10px;
+}
+
+.lang_btn img{
+    width: 10px;
+    align-items: center;
+    margin-left: 2px;
+}
+
+.head{
+    
+    position: relative;
+    /* top: 50%;
+    left: 20%;
+    transform: translate(-10%,-50%); */
+    text-align: center;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+.head h1{
+    
+    font-size: 56px;
+    line-height: 60px;
+    font-weight: 800;
+    max-width: 70vw;
+}
+.head h3{
+    font-size: 27px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.head p{
+    font-size: 24px;
+    font-weight: 300;
+
+}
+
+.signup{
+    width: 50%;
+    border: 1px solid #ffffffa2;
+    background-color: transparent;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    /* margin-left: 20%; */
+    margin-top: 30px;
+    overflow: hidden;
+}
+.signup input{
+    color: #fff;
+    background-color: transparent;
+    flex: 1;
+    border: 0;
+    outline: 0;
+    margin-left: 30px;
+}
+
+.signup button{
+    background: #b90505;
+    border: 0;
+    outline: 0;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 15px 13px;
+}
+
+.feature{
+    padding: 50px 12%;
+    font-size: 22px;
+
+}
+.download{
+    position: relative;
+    transform: translateY(-110%);
+    height: 10vh;
+    border: 1px solid #ffffffa2;
+    background-color: black;
+    display: block;
+    width: 65%;
+    border-radius: 10px;
+    margin: auto;
+    display: flex;
+    
+}
+#load{
+    position: relative;
+    margin: 1% ,5%;
+    width: 19%;
+    height: 8vh;
+    transform: translateX(1%);
+}
+.download p{
+    padding-top: 4%;
+    padding-right: 30%;
+    font-size: 18px;
+    font-weight: 600;
+}
+#download{
+    position: absolute;
+    width: 16%;
+    right :20px;
+    top: 5%;
+}
+#blue{
+    position: absolute;
+    bottom: 15%;
+    left: 36%;
+    color: rgb(64, 105, 240);
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.row{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px 0;
+}
+.tcol{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+.icol{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+.icol img{
+    display: block;
+    width: 90%;
+    margin: auto;
+}
+.feature h2{
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.faq{
+    padding: 10px 12%;
+    text-align: center;
+    font-size: 18px;
+}
+
+.faq h2{
+    font-weight: 500;
+    font-size: 40px;
+}
+
+.accordion{
+    margin: 60px auto;
+    width: 100%;
+    max-width: 750px;
+}
+
+.accordion li{
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+}
+
+.accordion li label{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    background: #303030;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+}
+
+label::after{
+    content: '+';
+    font-size: 34px;
+    position: absolute;
+    right: 20px;
+    transition: tranform 0.5sf;
+}
+
+input[type="radio"]{
+    display: none;
+}
+.accordion .content{
+    background: #303030;
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s, padding 0.3s;
+}
+.accordion input[type="radio"]:checked + label + .content{
+    max-height: 600px;
+    padding: 30px 20px;
+}
+
+.accordion input[type="radio"]:checked + label::after{
+    transform: rotate(135deg);
+}
+*::selection{
+    color: #fff;
+    background-color: rgb(64, 105, 240);
+}
+
+
+/* -----------------responsive---------------- */
+
+@media only screen and (max-width: 600px){
+    .logo{
+        width: 100px;
+
+    }
+    nav button {
+        padding: 5px 10px;
+    }
+    nav .lang_btn{
+        padding: 4px 8px;
+    }
+    .head{
+        position: unset;
+        transform: none;
+        padding-top: 80px;
+    }
+    .head h1{
+        font-size: 30px;
+    }
+    .signup button{
+        font-size: 12px;
+        padding: 10px 15px;
+    }
+    .tcol, .icol{
+        flex-basis: 100%;
+    }
+    .feature h2{
+        font-size: 30px;
+    }
+    .feature p{
+        font-size: 15px;
+    }
+    .row:nth-child(2), .row:nth-child(4){
+        flex-direction: column-reverse;
+    }
+    .feature.row{
+        padding: 10px 0;
+    }
+    .faq h2{
+        font-size: 20px;
+    }
+    .accordion .content{
+        font-size: 14px;
+    }
+    .accordion li label{
+        padding: 10px;
+        font-size: 14px;
+    }
+    label::after{
+        font-size: 22px;
+    }
+    .download{
+        position: relative;
+        transform: translateY(-110%);
+        height: 10vh;
+        border: 1px solid #ffffffa2;
+        background-color: black;
+        display: block;
+        width: 65%;
+        border-radius: 10px;
+        margin: auto;
+        display: flex;
+        
+    }
+    #load{
+        position: relative;
+        margin: 1% ,5%;
+        width: 19%;
+        height: 8vh;
+        transform: translateX(1%);
+    }
+    .download p{
+        padding-top: 4%;
+        padding-right: 30%;
+        font-size: 15px;
+        font-weight: 600;
+    }
+    #download{
+        position: absolute;
+        width: 16%;
+        right :20px;
+        top: 20%;
+    }
+    #blue{
+        position: absolute;
+        bottom: 15%;
+        left: 26%;
+        color: rgb(64, 105, 240);
+        font-size: 15px;
+        font-weight: 400;
+    }
+    .signup{
+        width: 70%;
+    }
+    *::selection{
+        color: #fff;
+        background-color: rgb(64, 105, 240);
+    }
+
+}
